@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=example
+  # app:
+  #   build:
+  #     context: .
+  #   image: nextjs-dev
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     NODE-ENV: development
+  #   develop:
+  #     watch:
+  #       - action: sync
+  #         path: ./src
+  #         target: /app/src
+  #         ignore:
+  #           - node_modules/
+  #       - action: rebuild
+  #         path: package.json
